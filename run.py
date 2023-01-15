@@ -8,4 +8,11 @@ from category import RETRO_GAMES, CAR_BRANDS, FOODS, ANIMALS
 from difficulty import EASY, MEDIUM, HARD
 
 
-welcome()
+def main():
+    """
+    Run game functions
+    """
+    welcome()
+
+
+main()
