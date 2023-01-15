@@ -64,18 +64,21 @@ Choose difficulty level from the list bellow:
         if chosen_difficulty in {"e", "m", "h"}:
             if chosen_difficulty == "e":
                 difficulty = EASY
-                print(len(difficulty))
-                return difficulty
+                lives = len(difficulty) - 1
+                print(lives)
+                return lives
 
             if chosen_difficulty == "m":
                 difficulty = MEDIUM
-                print(len(difficulty))
-                return difficulty
+                lives = len(difficulty) - 1
+                print(lives)
+                return lives
 
             if chosen_difficulty == "h":
                 difficulty = HARD
-                print(len(difficulty))
-                return difficulty
+                lives = len(difficulty) - 1
+                print(lives)
+                return lives
 
         else:
             choose_difficulty()
