@@ -1,3 +1,6 @@
+# Modules
+import random
+
 # Welcome message from welcome.py
 from welcome import welcome
 
@@ -10,8 +13,8 @@ from difficulty import EASY, MEDIUM, HARD
 
 def choose_category():
     """
-    Let's the user to choose word cetegory
-    to play with and return their choice.
+    Let's the user to choose word cetegory to play
+    with and return a random word from their choice.
     """
     print("""
 Choose category to play with from the list bellow:
@@ -26,23 +29,27 @@ Choose category to play with from the list bellow:
         if chosen_category in {"1", "2", "3", "4"}:
             if chosen_category == "1":
                 category = RETRO_GAMES
-                print(category)
-                return category
+                word = random.choice(category)
+                print(word)
+                return word
 
             if chosen_category == "2":
                 category = CAR_BRANDS
-                print(category)
-                return category
+                word = random.choice(category)
+                print(word)
+                return word
 
             if chosen_category == "3":
                 category = FOODS
-                print(category)
-                return category
+                word = random.choice(category)
+                print(word)
+                return word
 
             if chosen_category == "4":
                 category = ANIMALS
-                print(category)
-                return category
+                word = random.choice(category)
+                print(word)
+                return word
 
         else:
             choose_category()
