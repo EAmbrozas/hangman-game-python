@@ -48,13 +48,46 @@ Choose category to play with from the list bellow:
             choose_category()
 
 
+def choose_difficulty():
+    """
+    Let's the user to choose difficulty level
+    to play with that returns amount of game lives.
+    """
+    print("""
+Choose difficulty level from the list bellow:
+[E] Easy for 10 lives
+[M] Medium for 8 lives
+[H] Hard for 6 lives
+""")
+    while True:
+        chosen_difficulty = input("Difficulty: ")
+        if chosen_difficulty in {"e", "m", "h"}:
+            if chosen_difficulty == "e":
+                difficulty = EASY
+                print(len(difficulty))
+                return difficulty
+
+            if chosen_difficulty == "m":
+                difficulty = MEDIUM
+                print(len(difficulty))
+                return difficulty
+
+            if chosen_difficulty == "h":
+                difficulty = HARD
+                print(len(difficulty))
+                return difficulty
+
+        else:
+            choose_difficulty()
+
+
 def main():
     """
     Run game functions
     """
-    global category
     welcome()
     choose_category()
+    choose_difficulty()
 
 
 main()
