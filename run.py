@@ -27,28 +27,27 @@ Choose category to play with from the list bellow:
     while True:
         chosen_category = input("Category: ")
         if chosen_category in {"1", "2", "3", "4"}:
+
+            global word
+
             if chosen_category == "1":
                 category = RETRO_GAMES
                 word = random.choice(category)
-                print(word)
                 return word
 
             if chosen_category == "2":
                 category = CAR_BRANDS
                 word = random.choice(category)
-                print(word)
                 return word
 
             if chosen_category == "3":
                 category = FOODS
                 word = random.choice(category)
-                print(word)
                 return word
 
             if chosen_category == "4":
                 category = ANIMALS
                 word = random.choice(category)
-                print(word)
                 return word
 
         else:
@@ -69,26 +68,34 @@ Choose difficulty level from the list bellow:
     while True:
         chosen_difficulty = input("Difficulty: ")
         if chosen_difficulty in {"e", "m", "h"}:
+
+            global lives
+
             if chosen_difficulty == "e":
                 difficulty = EASY
                 lives = len(difficulty) - 1
-                print(lives)
                 return lives
 
             if chosen_difficulty == "m":
                 difficulty = MEDIUM
                 lives = len(difficulty) - 1
-                print(lives)
                 return lives
 
             if chosen_difficulty == "h":
                 difficulty = HARD
                 lives = len(difficulty) - 1
-                print(lives)
                 return lives
 
         else:
             choose_difficulty()
+
+
+def game():
+    """
+    Main game loop
+    """
+    print(word)
+    print(lives)
 
 
 def main():
@@ -98,6 +105,7 @@ def main():
     welcome()
     choose_category()
     choose_difficulty()
+    game()
 
 
 main()
