@@ -94,7 +94,13 @@ def game():
     """
     Main game loop
     """
+    # Dashes for each letter in a word
+    current_guess = "_" * len(word)
+    # Wrong guess counter
+    wrong_guess = 0
+
     print(word)
+    print(current_guess)
     print(lives)
 
 
