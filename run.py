@@ -101,6 +101,9 @@ def game():
     # Wrong guess counter
     wrong_guess = 0
 
+    # Used letters tracker
+    used_letters = []
+
     # Prints out current game state image
     print(difficulty[wrong_guess])
 
