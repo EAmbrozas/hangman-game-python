@@ -104,12 +104,25 @@ def game():
     # Used letters tracker
     used_letters = []
 
-    # Prints out current game state image
-    print(difficulty[wrong_guess])
+    # While loop that will run until the user guesses the word
+    # or until they run out of lives
+    while wrong_guess < lives and current_guess != word:
+        # Prints out current game state image
+        print(difficulty[wrong_guess])
+        # Prints out the list of letter used
+        print(f"You have used the following letters: {used_letters}")
+        # Prints out current state of the word to be guessed
+        print("So far the word is: ", current_guess)
 
-    print(word)
-    print(current_guess)
-    print(lives)
+        guess = input("Enter your letter guess: ")
+
+        # Check if letter already used
+        while guess in used_letters:
+            print(f"You have already used |{guess}| letter")
+            guess = input("Enter your letter guess: ").upper()
+
+        # Add guessed letter to used letters list
+        used_letters.append(guess)
 
 
 def main():
