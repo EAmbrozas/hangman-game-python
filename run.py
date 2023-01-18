@@ -124,6 +124,27 @@ def game():
         # Add guessed letter to used letters list
         used_letters.append(guess)
 
+        # Check if guessed letter in a word
+        if guess in word:
+
+            print("You have guessed correctly!")
+
+            # Give a new version of the word mixed with letters and dashes
+            new_current_guess = ""
+
+            for letter in range(len(word)):
+                if guess == word[letter]:
+                    new_current_guess += guess
+                else:
+                    new_current_guess += current_guess[letter]
+
+            current_guess = new_current_guess
+
+        else:
+            print("Sorry that is incorrect letter")
+            # Increase the numuber of incorrect by 1
+            wrong_guess += 1
+
 
 def main():
     """
