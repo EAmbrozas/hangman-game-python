@@ -69,6 +69,7 @@ Choose difficulty level from the list bellow:
         chosen_difficulty = input("Difficulty: ")
         if chosen_difficulty in {"e", "m", "h"}:
 
+            global difficulty
             global lives
 
             if chosen_difficulty == "e":
@@ -96,8 +97,12 @@ def game():
     """
     # Dashes for each letter in a word
     current_guess = "_" * len(word)
+
     # Wrong guess counter
     wrong_guess = 0
+
+    # Prints out current game state image
+    print(difficulty[wrong_guess])
 
     print(word)
     print(current_guess)
