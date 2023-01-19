@@ -1,6 +1,9 @@
 # Modules
 import random
 
+# Game over message from end.py
+from end import game_over
+
 # Welcome message from welcome.py
 from welcome import welcome
 
@@ -144,6 +147,10 @@ def game():
             print("Sorry that is incorrect letter")
             # Increase the numuber of incorrect by 1
             wrong_guess += 1
+
+    # End the game
+    if wrong_guess == lives:
+        game_over()
 
 
 def main():
