@@ -1,8 +1,8 @@
 # Modules
 import random
 
-# Game over message from end.py
-from end import game_over
+# Game over and won messages from end.py
+from end import game_over, won
 
 # Welcome message from welcome.py
 from welcome import welcome
@@ -151,6 +151,9 @@ def game():
     # End the game
     if wrong_guess == lives:
         game_over()
+
+    else:
+        won()
 
 
 def main():
