@@ -1,6 +1,9 @@
 # Modules
 import random
 
+# import only system from os
+from os import system, name
+
 # Game over and won messages from end.py
 from end import game_over, won
 
@@ -12,6 +15,20 @@ from category import RETRO_GAMES, CAR_BRANDS, FOODS, ANIMALS
 
 # Difficulty levels from difficulty.py
 from difficulty import EASY, MEDIUM, HARD
+
+
+# define our clear function
+def clear():
+    """
+    Clears the reminal
+    """
+    # for windows
+    if name == 'nt':
+        _ = system('cls')
+ 
+    # for mac and linux(here, os.name is 'posix')
+    else:
+        _ = system('clear')
 
 
 def choose_category():
@@ -110,6 +127,7 @@ def game():
     # While loop that will run until the user guesses the word
     # or until they run out of lives
     while wrong_guess < lives and current_guess != word:
+        clear()
         # Prints out current game state image
         print(difficulty[wrong_guess])
         # Prints out the list of letter used
@@ -150,12 +168,14 @@ def game():
 
     # End the game
     if wrong_guess == lives:
+        clear()
         game_over()
         print(difficulty[wrong_guess])
         print("You have been hanged!")
         print("The correct word was", word)
 
     else:
+        clear()
         won()
 
 
@@ -164,8 +184,11 @@ def main():
     Run game functions
     """
     welcome()
+    clear()
     choose_category()
+    clear()
     choose_difficulty()
+    clear()
     game()
 
 
