@@ -4,6 +4,9 @@ import random
 # import only system from os
 from os import system, name
 
+# import sleep to show output for some time period
+from time import sleep
+
 # Game over and won messages from end.py
 from end import game_over, won
 
@@ -173,10 +176,16 @@ def game():
         print(difficulty[wrong_guess])
         print("You have been hanged!")
         print("The correct word was", word)
+        sleep(3)
+        clear()
+        main()
 
     else:
         clear()
         won()
+        sleep(3)
+        clear()
+        main()
 
 
 def main():
