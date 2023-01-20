@@ -105,7 +105,7 @@ def game():
     wrong_guess = 0
 
     # Used letters tracker
-    used_letters = []
+    used_letters = ["-"]
 
     # While loop that will run until the user guesses the word
     # or until they run out of lives
@@ -151,6 +151,9 @@ def game():
     # End the game
     if wrong_guess == lives:
         game_over()
+        print(difficulty[wrong_guess])
+        print("You have been hanged!")
+        print("The correct word was", word)
 
     else:
         won()
