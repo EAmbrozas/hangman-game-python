@@ -1,7 +1,7 @@
 # Code that will run if the user looses the game
 def game_over():
     """
-    Will run a message leting the user know they
+    Will run a message letting the user know they
     have lost the game
     """
     print("""
@@ -17,7 +17,7 @@ def game_over():
 # Code that will run if the game is won
 def won():
     """
-    Will run a message leting the user know they
+    Will run a message letting the user know they
     have won the game
     """
     print("""

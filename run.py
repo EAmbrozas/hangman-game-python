@@ -23,12 +23,12 @@ from difficulty import EASY, MEDIUM, HARD
 # define our clear function
 def clear():
     """
-    Clears the reminal
+    Clears the terminal
     """
     # for windows
     if name == 'nt':
         _ = system('cls')
- 
+
     # for mac and linux(here, os.name is 'posix')
     else:
         _ = system('clear')
