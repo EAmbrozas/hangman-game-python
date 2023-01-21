@@ -89,6 +89,7 @@ I didn't change anything because the game was still able to run without any prob
 <ul>
     <li>When you add more than one letter at a time, the computer recognizes it as a valid guess and updates the hangman game state.</li>
     <li>The hangman game state is updated when a number or any other sign is added and the software accepts it as a valid guess.</li>
+    <li>When the game generated a random word that was more than one word, empty spaces were replaced with underscores, thus I opted to delete these words from the list because I couldn't fix the problem.</li>
 </ul>
 
 <h2 id="deployment">Deployment</h2><hr>
@@ -118,3 +119,5 @@ I didn't change anything because the game was still able to run without any prob
     <li>My Mentor Ronan for information and motivation.</li>
     <li>My Cohort lead Kasia for support.</li>
 </ul>
+
+<p>This project was the first project so far that I really struggled with. From the confusing course material to poor selection of walk trough project. I tried to gain more knowledge from other sources but was to late due to the deadline and a limited amount of time that I had to finish the project.</p>
