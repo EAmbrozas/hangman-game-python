@@ -1,6 +1,6 @@
 <h1>PYTHON HANGMAN GAME | PORTFOLIO PROJECT 3</h1>
 <p>This Python Terminal Hangman Game is the third project for code institute. </p>
-<img src="./readme/welcome.png">
+<img src="./readme/main.png">
 <a href="https://python-hangman-game-ernestas.herokuapp.com/" target="_blank">View live website here.</a>
 
 <h2>Table of Contents</h2><hr>
@@ -32,6 +32,7 @@
 >As a user, I want to be able to easily comprehend on what the game is.
 <ul>
     <li>The user is welcomed to play the hangman game as soon as the software launches.</li>
+    <img src="./readme/welcome.png">
 </ul> 
 
 >As a user, I want to be able to pick a category.
